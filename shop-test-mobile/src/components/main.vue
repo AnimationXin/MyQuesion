@@ -1,13 +1,21 @@
 <template>
-  <div class="hello">
-    hello HelloWorld
+  <div class="app">
+    <merchants-head></merchants-head>
+    <merchants-nav></merchants-nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import _ from 'lodash'
+import MerchantsHead from './header'
+import MerchantsNav from './nav'
 export default {
   name: 'HelloWorld',
+  components: {
+    MerchantsHead,
+    MerchantsNav
+  },
   data () {
     return {
     }
@@ -15,7 +23,6 @@ export default {
   methods: {
   },
   mounted () {
-    console.log('123')
   },
   created () {
   }
