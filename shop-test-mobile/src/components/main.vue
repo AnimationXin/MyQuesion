@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import _ from 'lodash'
 import MerchantsHead from './header'
 import MerchantsNav from './nav'
+import restful from './server/restful.js'
 export default {
   name: 'HelloWorld',
   components: {
@@ -22,7 +22,9 @@ export default {
   },
   methods: {
   },
-  mounted () {
+  async mounted () {
+    let resp = await restful.goods()
+    console.log(resp)
   },
   created () {
   }

@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueRouter from '../node_modules/vue-router'
 
 Vue.config.productionTip = false
 
