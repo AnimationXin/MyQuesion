@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <merchants-head></merchants-head>
+    <merchants-head v-model="fetchIndfo"></merchants-head>
     <merchants-nav></merchants-nav>
     <router-view></router-view>
   </div>
@@ -18,13 +18,14 @@ export default {
   },
   data () {
     return {
+      fetchIndfo: null
     }
   },
   methods: {
   },
   async mounted () {
     let resp = await restful.goods()
-    console.log(resp)
+    this.fetchIndfo = resp.data.data.poi_info
   },
   created () {
   }
